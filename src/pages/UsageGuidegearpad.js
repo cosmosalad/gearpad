@@ -45,7 +45,7 @@ const OnekeyHybridEn = () => {
   return (
     <div className="min-h-screen bg-blue-100 flex flex-col justify-center">
       <div className="p-4" style={{ width: '2630px' }}>
-        <h1 className="text-3xl font-bold mb-6 text-gray-800">Gearpad Usage Guide</h1>
+        <h1 className="text-3xl font-bold mb-6 text-gray-800">Gearpad 사용 가이드</h1>
         <button
           onClick={() => setShowDetails(!showDetails)}
           className="mb-20 px-4 py-2 bg-blue-500 text-white rounded"

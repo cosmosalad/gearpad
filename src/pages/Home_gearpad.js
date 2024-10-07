@@ -4,21 +4,21 @@ import { ReactTyped } from "react-typed";
 
 const Home = () => {
   const practiceTypes = [
-    { name: 'Korean', path: '/gearpad/korean', description: 'Practice Korean with gearnumpad' },
-    { name: 'English', path: '/gearpad/english', description: 'Practice english with gearnumpad' },
+    { name: 'Korean', path: '/gearpad/korean', description: '한글 gaerpad 자판 연습하기' },
+    { name: 'English', path: '/gearpad/english', description: '영문 gearpad 자판 연습하기' },
   ];
 
   const regularTyping = {
-    name: 'Typing Practice',
+    name: '타이핑 연습',
     path: '/gearpad/typingpractice',
-    description: 'Practice typing in English or Korean with various texts'
+    description: '한국어 또는 영어 타이핑 연습하기'
   };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-blue-100 p-4">
       <h1 className="text-4xl font-bold mb-8 h-16">
         <ReactTyped
-          strings={["Gearpad Typing Practice", "Gearpad 타이핑 연습"]}
+          strings={["Gearpad Typing Practice", "기어패드 타이핑 연습"]}
           typeSpeed={40}
           backSpeed={50}
           backDelay={10000}
@@ -70,7 +70,7 @@ const Home = () => {
           to="/gearpad/usageguide"
           className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
         >
-          Usage Guide
+          사용 가이드
         </Link>
       <div className="mt-8 text-sm text-gray-600">
         © 2024 <a href="https://github.com/cosmosalad/" className="text-blue-600 hover:underline">cosmosalad</a>. All rights reserved.

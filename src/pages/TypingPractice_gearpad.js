@@ -44,7 +44,7 @@ const TypingPractice = () => {
   const calculateCPM = useCallback(() => {
     if (startTime && selectedText) {
       const now = Date.now();
-      const timeElapsed = (now - startTime) / 60000; // 분 단위
+      const timeElapsed = (now - startTime) / 60000;
       let totalCharacters = 0;
 
       if (language === 'kr') {
@@ -179,14 +179,13 @@ const TypingPractice = () => {
       setLanguage('');
       setTexts([]);
     } else {
-      navigate('/onekeytype');
+      navigate('/gearpad');
     }
   }, [selectedText, language, resetPractice, navigate]);
 
   const toggleKeyboardOptions = () => {
     setShowKeyboardOptions(!showKeyboardOptions);
     if (showKeyboardOptions) {
-      // 키보드 옵션을 숨길 때 키보드도 함께 숨깁니다
       setShowKeyboard(false);
       setCurrentLayout('');
     }
@@ -204,7 +203,7 @@ const TypingPractice = () => {
           onClick={toggleKeyboardOptions}
           className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors mr-4"
         >
-          {showKeyboardOptions ? 'Hide Keyboard' : 'Show Keyboard'}
+          {showKeyboardOptions ? '키보드 숨기기' : '키보드 표시'}
         </button>
         {showKeyboardOptions && (
           <select
@@ -212,9 +211,9 @@ const TypingPractice = () => {
             onChange={(e) => changeLayout(e.target.value)}
             className="px-2 py-1 border border-gray-300 rounded"
           >
-            <option value="">Select Layout</option>
-            <option value="Korean">Korean</option>
-            <option value="English">English</option>
+            <option value="">레이아웃 선택</option>
+            <option value="Korean">한국어</option>
+            <option value="English">영어</option>
           </select>
         )}
       </div>
@@ -237,7 +236,7 @@ const TypingPractice = () => {
           <button
             onClick={handleGoBack}
             className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">
-            Go Back to Home
+            홈으로 돌아가기
           </button>
         </>
       )}
@@ -273,7 +272,7 @@ const TypingPractice = () => {
             />
           </div>
           <div className="mt-4 text-xl font-semibold text-gray-800">
-            Current Speed: {cpm} CPM
+            현재 속도: {cpm} CPM
           </div>
           <div className="mt-2 text-lg text-gray-600">
             Line: {currentLineIndex + 1} / {selectedText.text.length}
@@ -289,7 +288,7 @@ const TypingPractice = () => {
             onClick={handleGoBack}
             className="px-6 py-2 bg-blue-500 text-white rounded shadow text-lg transition duration-300 ease-in-out hover:scale-105 active:scale-95"
           >
-            New Practice
+            새로운 연습
           </button>
         </div>
       )}
@@ -298,7 +297,7 @@ const TypingPractice = () => {
         <button
           onClick={handleGoBack}
           className="mt-8 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">
-          Go Back
+          뒤로가기
         </button>
       )}
     </div>

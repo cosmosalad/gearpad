@@ -276,7 +276,7 @@ const OnekeyHybridKr = () => {
       <div className="my-2"></div>
       {renderKeysToPress()}
       <p className="mt-4 text-gray-600 flex flex-col items-center" >
-        {isCorrect === false ? '틀렸습니다. 다시 시도해주세요. 천지인 문제시 자음을 눌러 주세요.' : '화면에 표시된 한글 자모음에 해당하는 키를 눌러주세요.'}
+        {isCorrect === false ? '틀렸습니다. 다시 시도해주세요. 천지인 문제시 자음을 눌러 주세요.' : '화면에 표시된 키를 눌러주세요.'}
       </p>
       <div className="mt-2 text-sm text-gray-500">
         타이핑: {composedVowels[composingKeys.join('')] || composingKeys[composingKeys.length - 1] || ''}
