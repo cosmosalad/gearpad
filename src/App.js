@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Home_gearpad from './pages/Home_gearpad';
+import GearpadKr from './pages/GearpadKr';
+import GearpadEn from './pages/GearpadEn';
+import TypingPractice_gearpad from './pages/TypingPractice_gearpad';
+import UsageGuidegearpad from './pages/UsageGuidegearpad';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/gearpad" element={<Home_gearpad />} />
+        <Route path="/gearpad/korean" element={<GearpadKr />} />
+        <Route path="/gearpad/english" element={<GearpadEn />} />
+        <Route path="/gearpad/typingpractice" element={<TypingPractice_gearpad />} />
+        <Route path="/gearpad/usageguide" element={<UsageGuidegearpad />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
